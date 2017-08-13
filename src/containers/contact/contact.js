@@ -14,7 +14,7 @@ class Contact extends Component {
               Phone
             </div>
             <div className="contactInfo">
-              859-533-6876
+              859-537-1990
             </div>
           </div>
           <div className="contactContainer">
@@ -31,7 +31,7 @@ class Contact extends Component {
               Email
             </div>
             <div className="contactInfo">
-              contact@barhouse.com
+              theBarrHouseInn@gmail.com
             </div>
           </div>
         </div>

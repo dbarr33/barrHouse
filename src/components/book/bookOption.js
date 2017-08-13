@@ -29,9 +29,9 @@ class BookOption extends Component {
           <div className="bookOptionCost">{`$${cost}`}</div>
           <div className="bookOptionCost">{sleeps}</div>
           <div>{descriptionFiller}</div>
-          <Link className="bookOptionLink" to={path}>
+          {/* <Link className="bookOptionLink" to={path}>
             <button className="bookOptionButton">Availability</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     );

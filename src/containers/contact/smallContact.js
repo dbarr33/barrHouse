@@ -7,13 +7,13 @@ class Contact extends Component {
     return (
       <div className="smallContactsContainer">
         <div>
-           Phone: 859-533-6876
+           Phone: 859-537-1990
         </div>
         <div>
           Address: 1200 Cypress Street   Paris, KY 40361
         </div>
         <div>
-          Email: contact@barhouse.com
+          Email: theBarrHouseInn@gmail.com
         </div>
       </div>
     );
