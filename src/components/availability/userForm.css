@@ -1,0 +1,33 @@
+.userInput {
+  height: 2em;
+  width: 15em;
+  padding-left: 0.3em;
+  font-size: 1em;
+}
+
+.userFormButton {
+  height: 3em;
+  font-size: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  display: flex;
+  margin: auto;
+}
+
+.formLink {
+  text-decoration: none;
+}
+
+.astrisk {
+  font-size: 1.5em;
+  padding-top: 0.5em;
+  padding-right: 0.3em;
+  display: inline-block;
+}
+
+.astriskDescription {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  text-align: center;
+}

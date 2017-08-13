@@ -1,0 +1,37 @@
+.availabilityContainer {
+  padding-top: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 5em;
+  background: #F5F5F5;
+}
+
+.dateArrow {
+  width: 0.8em;
+  height: 0.8em;
+  margin: auto;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.dateSelectionContainer {
+  margin-bottom: 1em;
+  display: flex;
+  font-size: 2em;
+  margin-left: 4em;
+}
+
+.dateText {
+  text-align: center;
+  width: 5em;
+}
+
+.userFormContainer {
+  float: right;
+  display: inline-flex;
+  margin-right: 5em
+}
+
+.calendarContainer {
+  display: inline-block;
+}

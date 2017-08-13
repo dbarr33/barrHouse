@@ -1,0 +1,16 @@
+.amenititesContainer {
+  margin-top: 1em;
+}
+
+.amenitityRowContainer {
+  margin-bottom: 0.8em;
+}
+
+.amenitity {
+  display: inline-block;
+}
+
+.amenititesTitle {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}

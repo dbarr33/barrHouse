@@ -1,0 +1,69 @@
+
+.leftButton {
+  position: absolute;
+  top: 25em;
+  left: 2%;
+}
+
+.rightButton {
+  position: absolute;
+  top: 25em;
+  left: 93%;
+}
+
+.imageList {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 32em;
+  padding: 0;
+  margin: 0;
+}
+
+.viewPager {
+  white-space: nowrap;
+  width: 100%;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.pageIndicatorContainer {
+  position: absolute;
+  top: 32em;
+  width: 100%;
+}
+
+@-webkit-keyframes rightToLeft {
+  0% {left: 0%;}
+  100% {left: -100%;}
+}
+@-webkit-keyframes leftToRight {
+  0% {left: -100%;}
+  100% {left: 0%;}
+}
+/* Standard syntax */
+@keyframes rightToLeft {
+    0% {left: 0%;}
+    100% {left: -100%;}
+}
+
+/* Standard syntax */
+@keyframes leftToRight {
+    0% {left: -100%;}
+    100% {left: 0%;}
+}
+
+.rightToLeftTranslate {
+  -webkit-animation-name: rightToLeft; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: rightToLeft;
+  animation-duration: 1s;
+}
+
+.leftToRightTranslate {
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: leftToRight;
+  animation-duration: 1s;
+}

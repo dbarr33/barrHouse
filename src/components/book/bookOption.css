@@ -1,0 +1,41 @@
+
+.bookOptionContainer {
+  display: flex;
+  margin-bottom: 3em;
+  height: 20em;
+}
+
+.bookOptionImage {
+  width: 40%;
+}
+
+.bookOptionTitle {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+.bookOptionCost {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.bookOptionButton {
+  height: 3em;
+  font-size: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
+  display: flex;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.bookOptionLink {
+  text-decoration: none;
+}
+
+.bookOptionDetails {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 2em;
+}

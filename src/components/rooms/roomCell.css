@@ -1,0 +1,43 @@
+
+.image {
+  margin-top: -10em;
+  margin-bottom: 10em;
+}
+
+.imageContainer {
+  height: 25em;
+  margin: auto;
+  overflow: hidden;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.roomCellBook {
+  float: right;
+  margin-top: 1.5em;
+  margin-right: 1.5em;
+}
+
+.roomCellContainer {
+  margin-bottom: 3em;
+}
+
+.roomCellCost {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-size: 1.5em;
+}
+
+.roomCellLink {
+  text-decoration: none;
+  color: black;
+}
+
+.roomDescription {
+  font-size: 0.8em;
+}
+
+.roomTitle {
+  font-size: 2em;
+  display: inline-block;
+}

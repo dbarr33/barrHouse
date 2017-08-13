@@ -1,0 +1,47 @@
+
+.amenititesContainer {
+  margin-top: 1em;
+}
+
+.amenitityRowContainer {
+  margin-bottom: 0.8em;
+}
+
+.amenitity {
+  display: inline-block;
+}
+
+.amenititesTitle {
+  font-size: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+.bulletPoint {
+  margin-right: 1em;
+  border-radius: 50%;
+  height: 0.8em;
+  width: 0.8em;
+  background: black;
+  display: inline-block;
+  opacity: 0.4
+}
+
+.roomDetailsContainer {
+  padding: 3em;
+}
+
+.roomDetailImage {
+  width: 100%;
+  margin-top: -8em;
+  margin-bottom: 8em;
+}
+
+.roomDetailsImageContainer {
+  height: 35em;
+  overflow: hidden;
+  margin-bottom: 0.5em;
+}
+
+.roomTitle {
+  font-size: 2em;
+}

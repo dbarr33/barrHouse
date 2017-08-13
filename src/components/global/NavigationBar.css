@@ -1,0 +1,40 @@
+
+.navigationBar {
+  flex: 1;
+  overflow: hidden;
+  padding-top: 0.5em;
+}
+
+.titleContainer {
+  float: left;
+  margin-left: 2em;
+}
+
+.title {
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  font-size: 1.2em;
+  color: black;
+  text-decoration: none;
+}
+
+.navList {
+  float: right;
+}
+
+.navItem {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+}
+
+.navItem a {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  font-size: 1em;
+  color: black;
+  text-decoration: none;
+}

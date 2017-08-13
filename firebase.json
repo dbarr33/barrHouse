@@ -1,0 +1,25 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "firebase": "barr-house-1488128697057",
+    "public": "./build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/build/index.html"
+      },
+      {
+    "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
+    "destination": "/build/index.html"
+  }
+    ]
+  }
+}

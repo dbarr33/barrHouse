@@ -1,0 +1,25 @@
+
+.activeCircle {
+  margin-right: 1em;
+  border-radius: 50%;
+  height: 0.8em;
+  width: 0.8em;
+  background: white;
+  display: inline-block;
+  opacity: 0.9
+}
+
+.circle {
+  margin-right: 1em;
+  border-radius: 50%;
+  height: 0.8em;
+  width: 0.8em;
+  background: gray;
+  display: inline-block;
+  opacity: 0.7
+}
+
+.pageIndicator{
+  margin: auto;
+  width: 5.5%;
+}

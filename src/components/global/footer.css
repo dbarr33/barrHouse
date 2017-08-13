@@ -1,0 +1,36 @@
+
+.divider {
+  height: 150%;
+  width: 0.2em;
+  background-color: lightgray;
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.footer {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  height: 0.5em;
+}
+
+.footerList {
+  margin: auto;
+  height: 100%;
+  text-align: center;
+}
+
+.footerItem {
+  display: inline-block;
+  font-size: 1em;
+  color: lightblue;
+  text-decoration: none;
+}
+
+.footerItem a {
+  display: inline-block;
+  font-size: 1em;
+  color: lightblue;
+  text-decoration: none;
+}
