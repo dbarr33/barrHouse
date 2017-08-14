@@ -13,7 +13,7 @@ class Contact extends Component {
           Address: 1200 Cypress Street   Paris, KY 40361
         </div>
         <div>
-          Email: theBarrHouseInn@gmail.com
+          Email: TheBarrHouseInn@gmail.com
         </div>
       </div>
     );

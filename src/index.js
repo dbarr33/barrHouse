@@ -21,7 +21,7 @@ export const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <Root/>
+    <Root store={store}/>
   </Provider>,
   document.getElementById('root')
 );

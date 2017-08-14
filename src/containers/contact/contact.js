@@ -31,7 +31,7 @@ class Contact extends Component {
               Email
             </div>
             <div className="contactInfo">
-              theBarrHouseInn@gmail.com
+              TheBarrHouseInn@gmail.com
             </div>
           </div>
         </div>
