@@ -11,6 +11,7 @@ const descriptionFiller ="Lorem ipsum dolor sit amet, consectetur adipiscing eli
 class BookOption extends Component {
   render() {
     const {
+      room,
       cost,
       image,
       path,
@@ -26,8 +27,10 @@ class BookOption extends Component {
         />
         <div className="bookOptionDetails">
           <div className="bookOptionTitle">{title}</div>
-          <div className="bookOptionCost">{`$${cost}`}</div>
-          <div className="bookOptionCost">{sleeps}</div>
+          <div className="bookOptionCost">{`$${room.weekCost} Sunday - Thursday`}</div>
+          <div className="bookOptionCost">{`$${room.weekendCost} Friday - Saturday`}</div>
+          <div className="bookOptionCost">{`$${room.cleaningFee} Cleaning Fee`}</div>
+          <div className="bookOptionCost">{`$${room.deposit} Deposit`}</div>
           <div>{descriptionFiller}</div>
           {/* <Link className="bookOptionLink" to={path}>
             <button className="bookOptionButton">Availability</button>
