@@ -8,24 +8,24 @@
    -webkit-align-items: center; /* Safari 7.0+ */
   background: white;
   flex-direction: column;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .sectionDescription {
-  padding-top: 1em;
+  padding-top: 2em;
   width: 60%;
   text-align: center;
 }
 
 .sectionDivider {
   width: 60%;
-  height: 3px;
+  height: 4px;
   background: #0099cc;
 }
 
 .sectionText {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   font-size: 2em;
 }
