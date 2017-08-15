@@ -57,6 +57,7 @@ class Root extends Component {
           <Route path="contact" component={Contact}/>
           <Route path="book/:bookID" component={Availability}/>
           <Route path="confirmation" component={Confirmation}/>
+          <Route path="*" component={Home} />
         </Route>
       </Router>
     );

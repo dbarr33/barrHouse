@@ -5,6 +5,16 @@
   padding-top: 0.5em;
 }
 
+.construction {
+  width: 100%;
+  background-color: red;
+  text-align: center;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+}
+
 .titleContainer {
   float: left;
   margin-left: 2em;
