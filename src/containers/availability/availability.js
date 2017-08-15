@@ -4,11 +4,10 @@ import React, {
 import Moment from 'react-moment'
 import { connect } from 'react-redux';
 
-import Calendar  from '../../components/global/calendar';
+// Components
 import UserForm  from '../../components/availability/userForm';
 
-import Arrow from '../../assets/arrow.png';
-
+// Styles
 import './availability.css';
 
 class Availability extends Component {
@@ -22,57 +21,10 @@ class Availability extends Component {
     this.props.changeUserValue({ property: 'range', value: range });
   }
 
-  renderStartDate() {
-    if(this.props.range) {
-      return (
-        <div className="dateText">
-          <Moment format="MM/DD/YYYY">{this.props.range.start}</Moment>
-        </div>
-      );
-    }
-    return (
-      <div className="dateText">
-        Start Date
-      </div>
-    );
-  }
-  renderEndDate() {
-    if(this.props.range) {
-      console.log(this.props.range)
-      return (
-        <div className="dateText">
-          <Moment format="MM/DD/YYYY">{this.props.range.end}</Moment>
-        </div>
-      );
-    }
-    return (
-      <div className="dateText">
-        End Date
-      </div>
-    );
-  }
-
   render() {
     return (
       <div className="availabilityContainer">
-        <div className="dateSelectionContainer">
-          {this.renderStartDate()}
-          <img
-            alt="dateArrow"
-            src={Arrow}
-            className="dateArrow"
-          />
-          {this.renderEndDate()}
-        </div>
-        <div className="calendarContainer">
-          <Calendar
-            value={this.props.range}
-            handleSelection={this.handleSelect.bind()}
-          />
-        </div>
-        <div className="userFormContainer">
-          <UserForm/>
-        </div>
+        <UserForm/>
       </div>
     );
   }

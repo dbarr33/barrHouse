@@ -3,12 +3,13 @@ import React, {
 } from 'react';
 import { Link } from 'react-router'
 import { connect } from 'react-redux';
+import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from 'react-datepicker';
 
 import './userForm.css';
 
 const requiredFields = [
-  'firstName',
-  'lastName',
+  'name',
   'phoneNumber',
   'email',
 ];
@@ -19,14 +20,11 @@ class UserForm extends Component{
     return requiredFields.every(field => this.props[field]) && this.props.range;
   }
 
-  renderInput({key, placeHolder}) {
+  renderInput({key, placeHolder, className}) {
     return (
       <div className="inputRow">
-        <div className="astrisk">
-          *
-        </div>
         <input
-          className="userInput"
+          className={'userInput'}
           placeholder={placeHolder}
           onChange={(event) => {
             this.props.changeUserValue({ property: key, value: event.target.value });
@@ -36,16 +34,37 @@ class UserForm extends Component{
     );
   }
 
+  renderInputMessage() {
+    return (
+      <div className="inputRow">
+        <textarea
+          className={'userInputMessage'}
+          placeholder={'Message'}
+          onChange={(event) => {
+            this.props.changeUserValue({ property: 'message', value: event.target.value });
+          }}
+        />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="userForm">
-        {this.renderInput({ key: 'firstName', placeHolder: 'First Name' })}
-        {this.renderInput({ key: 'lastName', placeHolder: 'Last Name' })}
-        {this.renderInput({ key: 'email', placeHolder: 'Email' })}
-        {this.renderInput({ key: 'phoneNumber', placeHolder: 'Phone Number' })}
-        <div className="astriskDescription">
-          * Required Fields
+        <div className={'row'}>
+          {this.renderInput({ key: 'name', placeHolder: 'Name' })}
+          {this.renderInput({ key: 'email', placeHolder: 'Email' })}
         </div>
+        <div className={'row'}>
+          {this.renderInput({ key: 'phoneNumber', placeHolder: 'Phone Number' })}
+          <DatePicker
+              selected={this.props.range}
+              onChange={(event) => {
+                this.props.changeUserValue({ property: 'range', value: event});
+              }}
+          />
+        </div>
+        {this.renderInputMessage()}
         <Link className="formLink" to="confirmation">
           <button disabled={!this.formIsReady()} className="userFormButton">
             Submit

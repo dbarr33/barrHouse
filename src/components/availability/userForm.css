@@ -1,7 +1,18 @@
 .userInput {
   height: 2em;
-  width: 15em;
+  width: 12em;
   padding-left: 0.3em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+}
+
+.userInputMessage {
+  height: 5em;
+  width: 24.8em;
+  padding-left: 0.3em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
   font-size: 1em;
 }
 
@@ -11,23 +22,16 @@
   padding-left: 3em;
   padding-right: 3em;
   display: flex;
-  margin: auto;
 }
 
 .formLink {
   text-decoration: none;
 }
 
-.astrisk {
-  font-size: 1.5em;
-  padding-top: 0.5em;
-  padding-right: 0.3em;
-  display: inline-block;
+.row {
+  display: flex;
+  flex-direction: row;
 }
 
-.astriskDescription {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-size: 0.8em;
-  text-align: center;
+.userForm {
 }
