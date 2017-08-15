@@ -12,26 +12,23 @@ class BookOption extends Component {
   render() {
     const {
       room,
-      cost,
       image,
       path,
-      sleeps,
       title,
+      isAlt,
     } = this.props;
     return (
-      <div className="bookOptionContainer">
-        <img
-          src={image}
-          className="bookOptionImage"
-          alt="bookingOption"
-        />
+      <div className={isAlt ? 'bookOptionContainerAlt' : 'bookOptionContainer' }>
+          <img
+            src={image}
+            className="bookOptionImage"
+            alt="bookingOption"
+          />
         <div className="bookOptionDetails">
           <div className="bookOptionTitle">{title}</div>
-          <div className="bookOptionCost">{`$${room.weekCost} Sunday - Thursday`}</div>
-          <div className="bookOptionCost">{`$${room.weekendCost} Friday - Saturday`}</div>
-          <div className="bookOptionCost">{`$${room.cleaningFee} Cleaning Fee`}</div>
-          <div className="bookOptionCost">{`$${room.deposit} Deposit`}</div>
-          <div>{descriptionFiller}</div>
+          <div className="bookOptionCost">{`$${room.weekCost} - $${room.weekendCost}`}</div>
+          <div className="bookOptionDate">{'Sun - Thu - Fri & Sat'}</div>
+          <div className={'bookOptionDescription'}>{descriptionFiller}</div>
           {/* <Link className="bookOptionLink" to={path}>
             <button className="bookOptionButton">Availability</button>
           </Link> */}

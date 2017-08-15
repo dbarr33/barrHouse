@@ -1,22 +1,47 @@
 
 .bookOptionContainer {
   display: flex;
-  margin-bottom: 3em;
+  background-color: #dddddd;
+  padding-left: 2%;
+  padding-right: 2%;
   height: 20em;
 }
 
+.bookOptionContainerAlt {
+  display: flex;
+  background-color: #f5f5f5;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 20em;
+}
+
+.bookOptionDescription {
+  font-size: 0.9em;
+}
+
 .bookOptionImage {
-  width: 40%;
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 .bookOptionTitle {
   margin-bottom: 0.5em;
   font-size: 1.5em;
+  text-align: center;
 }
 
 .bookOptionCost {
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+
+.bookOptionDate {
+  font-size: 0.9em;
+  margin-left: -0.50em;
+  text-align: center;
+  margin-bottom: 2em;
 }
 
 .bookOptionButton {
@@ -34,8 +59,9 @@
 }
 
 .bookOptionDetails {
-  width: 50%;
-  height: 100%;
+  width: 48%;
+  margin-top: 2em;
+  margin-left: 1%;
+  margin-right: 1%;
   display: inline-block;
-  margin-left: 2em;
 }

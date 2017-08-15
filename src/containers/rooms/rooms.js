@@ -30,6 +30,7 @@ class Rooms extends Component {
           room={{ weekCost: 175, weekendCost: 175, cleaningFee: 100, deposit: 100 }}
           path={"/book/singleBed"}
           title="Apartment - 1 Bedroom, 1 Bath, Kitchen, and Den"
+          isAlt
         />
         <BookOption
           image={Room1}
@@ -42,9 +43,11 @@ class Rooms extends Component {
           room={{ weekCost: 100, weekendCost: 100, cleaningFee: 50, deposit: 50 }}
           path={"/book/singleBed"}
           title="Second Bedroom (Shared Bath)"
+          isAlt
         />
+        <div className={'spacer'} />
         <div className="finePrint">
-          Taxes will be added and included: 6% sales tax. 1% transient room tax and 3% tourism tax.
+          Taxes will be added and included: 6% sales tax, 1% transient room tax, and 3% tourism tax.
         </div>
         <div className="finePrint">
           Booking will require a deposit with full payment due prior to arrival.
