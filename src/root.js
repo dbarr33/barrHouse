@@ -37,11 +37,11 @@ class Root extends Component {
 
   render() {
     return (
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route
           path="/"
           component={App}
-          onEnter={browserHistory.push('/#/home/')}
+          onEnter={browserHistory.push('home')}
           onChange={(prevState, nextState) => {
             if (nextState.location.action !== "POP") {
               window.scrollTo(0, 0);

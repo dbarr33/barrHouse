@@ -24,6 +24,14 @@
   display: flex;
 }
 
+.datePicker: {
+  height: 2em;
+  width: 12em;
+  padding-left: 0.3em;
+  margin-right: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 1em;
+}
 .formLink {
   text-decoration: none;
 }
