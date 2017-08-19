@@ -1,13 +1,14 @@
-import React, {
-  Component,
-} from 'react';
-import { Link } from 'react-router'
+
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
-const dateformat = require('dateformat');
+import 'react-datepicker/dist/react-datepicker.css';
 
 import './userForm.css';
-import 'react-datepicker/dist/react-datepicker.css';
+
+const dateformat = require('dateformat');
+
 
 const requiredFields = [
   'name',
@@ -17,14 +18,13 @@ const requiredFields = [
   'message'
 ];
 
-class UserForm extends Component{
+class UserForm extends Component {
 
   formIsReady() {
-    console.log(this.props)
     return requiredFields.every(field => this.props[field]);
   }
 
-  renderInput({key, placeHolder, className}) {
+  renderInput({ key, placeHolder }) {
     return (
       <div className="inputRow">
         <input
@@ -65,7 +65,7 @@ class UserForm extends Component{
           <DatePicker
             customInput={this.renderInput({ key: 'date', placeHolder: 'Date' })}
             onChange={(date) => {
-              this.props.changeUserValue({ property: 'date', value: dateformat(new Date(date), 'dd/m/yy')});
+              this.props.changeUserValue({ property: 'date', value: dateformat(new Date(date), 'dd/m/yy') });
             }}
           />
         </div>
@@ -78,7 +78,7 @@ class UserForm extends Component{
       </div>
     );
   }
-};
+}
 
 // redux
 const mapStateToProps = state => ({
@@ -91,7 +91,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   changeUserValue: ({ property, value }) => dispatch({
-    type: `CHANGE_USER_PROPERTY`,
+    type: 'CHANGE_USER_PROPERTY',
     payload: { property, value }
   }),
 });
