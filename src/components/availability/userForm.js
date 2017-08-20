@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import RaisedButton from 'material-ui/RaisedButton';
+import DatePicker from 'material-ui/DatePicker';
 import TextField from 'material-ui/TextField';
 
 // Actions
@@ -84,8 +84,14 @@ class UserForm extends Component {
         <div className={'row'}>
           {this.renderInput({ key: 'phone', placeHolder: 'Phone Number', type: 'tel' })}
           <DatePicker
-            customInput={this.renderInput({ key: 'date', placeHolder: 'Date' })}
-            onChange={(date) => {
+            style={{ backgroundColor: 'white', marginBottom: 9, paddingLeft: 5, width: 255 }}
+            floatingLabelText={'Date'}
+            floatingLabelStyle={{ color: Colors.primary }}
+            underlineShow={false}
+            disableYearSelection
+            formatDate={date => dateformat(new Date(date), 'dd/m/yy')}
+            minDate={new Date()}
+            onChange={(event, date) => {
               this.props.changeUserValue({ property: 'date', value: dateformat(new Date(date), 'dd/m/yy') });
             }}
           />
