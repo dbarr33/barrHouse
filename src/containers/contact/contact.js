@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
-import './contact.css'
-
+// Components
 import Map from '../../components/global/map';
+import UserForm from '../../components/availability/userForm';
+
+// Styles
+import './contact.css';
+
 
 class Contact extends Component {
   render() {
@@ -23,8 +27,9 @@ class Contact extends Component {
             </div>
             <div className="contactInfo">
               1200 Cypress Street
-              <br/>
-              Paris, KY 40361            </div>
+              <br />
+              Paris, KY 40361
+          </div>
           </div>
           <div className="contactContainer">
             <div className="contactHeader">
@@ -35,6 +40,7 @@ class Contact extends Component {
             </div>
           </div>
         </div>
+        <UserForm />
         <div className="mapContainer">
           <Map />
         </div>
