@@ -8,9 +8,6 @@ class NavigationBar extends Component {
   render() {
     return (
       <div className="navigationBar">
-        <div className="construction">
-          Under Construction
-        </div>
         <div className="titleContainer">
           <Link className="title" to="/home">Barr House</Link>
         </div>

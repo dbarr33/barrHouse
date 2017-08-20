@@ -1,7 +1,9 @@
 
 .navigationBar {
   flex: 1;
+  display: flex;
   overflow: hidden;
+  justify-content: space-between;
   padding-top: 0.5em;
 }
 
@@ -22,13 +24,13 @@
 
 .title {
   font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-  font-size: 1.2em;
-  color: black;
+  font-size: 1.9em;
+  color: #008080;
   text-decoration: none;
 }
 
 .navList {
-  float: right;
+  padding-top: 0.8em;
 }
 
 .navItem {
@@ -36,7 +38,7 @@
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 1em;
-  color: black;
+  color: #008080;
   text-decoration: none;
 }
 
@@ -45,6 +47,6 @@
   margin-left: 0.5em;
   margin-right: 0.5em;
   font-size: 1em;
-  color: black;
+  color: #008080;
   text-decoration: none;
 }
