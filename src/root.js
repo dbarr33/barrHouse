@@ -56,7 +56,7 @@ class Root extends Component {
               <Route path="events" component={Events} />
               <Route path="rooms" component={Rooms} />
               <Route path="rooms/:roomTitle" component={RoomDetails} />
-              <Route path="book" component={Availability} />
+              <Route path="book" component={Contact} />
               <Route path="contact" component={Contact} />
               <Route path="book/:bookID" component={Availability} />
               <Route path="confirmation" component={Confirmation} />

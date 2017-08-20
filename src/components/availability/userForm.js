@@ -29,7 +29,7 @@ const requiredFields = [
 class UserForm extends Component {
 
   componentWillUnmount() {
-      this.props.clearForm();
+    this.props.clearForm();
   }
 
   formIsReady() {
@@ -61,7 +61,7 @@ class UserForm extends Component {
           className={'userInputMessage'}
           multiLine
           rows={4}
-          floatingLabelStyle={{ color: Colors.primary  }}
+          floatingLabelStyle={{ color: Colors.primary }}
           floatingLabelText={'Message'}
           value={this.props.message || ''}
           style={{ backgroundColor: 'white', height: 150, width: 525 }}
@@ -77,6 +77,9 @@ class UserForm extends Component {
   render() {
     return (
       <div className="userForm">
+        <div className={'formCopy'}>
+          Please fill out the form below and get started on planning your event at The Barr House Inn!
+        </div>
         <div className={'row'}>
           {this.renderInput({ key: 'name', placeHolder: 'Name' })}
           {this.renderInput({ key: 'email', placeHolder: 'Email', type: 'email' })}

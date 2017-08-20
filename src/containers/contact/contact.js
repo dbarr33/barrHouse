@@ -40,9 +40,11 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-        <UserForm />
         <div className="mapContainer">
           <Map />
+        </div>
+        <div className="userFormContainer">
+          <UserForm />
         </div>
       </div>
     );

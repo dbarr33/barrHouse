@@ -11,8 +11,8 @@ import { displaySnackbar } from '../../actions/notifications.actions';
 export function* createEmail(action) {
   try {
     yield request(postEmail(action.payload));
-    yield put(displaySnackbar('Email Sent'));
+    yield put(displaySnackbar('Reservation Sent'));
   } catch (error) {
-    yield put(displaySnackbar('Email Sent'));
+    yield put(displaySnackbar('Reservation Sent'));
   }
 }

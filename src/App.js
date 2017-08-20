@@ -11,9 +11,9 @@ class App extends Component {
         <Helmet
           title="Barr House"
         />
-        <NavigationBar/>
+        <NavigationBar />
         {this.props.children}
-        <Footer/>
+        <Footer />
       </div>
     );
   }
