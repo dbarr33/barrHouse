@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 // Actions
 import { createEmail } from '../../actions/mailChip.actions';
@@ -30,11 +31,12 @@ class UserForm extends Component {
   renderInput({ key, placeHolder, type }) {
     return (
       <div className="inputRow">
-        <input
-          type={type}
-          value={this.props[key] || ''}
+        <TextField
           className={'userInput'}
-          placeholder={placeHolder}
+          floatingLabelText={placeHolder}
+          value={this.props[key] || ''}
+          style={{ backgroundColor: 'white', }}
+          underlineShow={false}
           onChange={(event) => {
             this.props.changeUserValue({ property: key, value: event.target.value });
           }}
@@ -46,9 +48,14 @@ class UserForm extends Component {
   renderInputMessage() {
     return (
       <div className="inputRow">
-        <textarea
+        <TextField
           className={'userInputMessage'}
-          placeholder={'Message'}
+          multiLine
+          rows={4}
+          floatingLabelText={'Message'}
+          value={this.props.message || ''}
+          style={{ backgroundColor: 'white', height: 150, width: 525 }}
+          underlineShow={false}
           onChange={(event) => {
             this.props.changeUserValue({ property: 'message', value: event.target.value });
           }}

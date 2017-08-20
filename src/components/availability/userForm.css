@@ -1,18 +1,14 @@
 .userInput {
-  height: 2em;
-  width: 12em;
+  background-color: white;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
   padding-left: 0.3em;
-  margin-right: 0.3em;
-  margin-bottom: 0.3em;
   font-size: 1em;
 }
 
 .userInputMessage {
-  height: 5em;
-  width: 24.8em;
   padding-left: 0.3em;
-  margin-right: 0.3em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
   font-size: 1em;
 }
 
