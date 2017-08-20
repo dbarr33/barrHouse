@@ -8,7 +8,5 @@ import { request } from '../../services/request';
 export function* createEmail(action) {
   try {
     yield request(postEmail(action.payload));
-  } catch (error) {
-    alert(error.message);
-  }
+  } catch (error) { }
 }

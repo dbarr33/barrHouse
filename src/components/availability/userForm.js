@@ -15,7 +15,7 @@ const dateformat = require('dateformat');
 
 const requiredFields = [
   'name',
-  'phoneNumber',
+  'phone',
   'email',
   'date',
   'message'
@@ -27,10 +27,11 @@ class UserForm extends Component {
     return requiredFields.every(field => this.props[field]);
   }
 
-  renderInput({ key, placeHolder }) {
+  renderInput({ key, placeHolder, type }) {
     return (
       <div className="inputRow">
         <input
+          type={type}
           value={this.props[key]}
           className={'userInput'}
           placeholder={placeHolder}
@@ -61,10 +62,10 @@ class UserForm extends Component {
       <div className="userForm">
         <div className={'row'}>
           {this.renderInput({ key: 'name', placeHolder: 'Name' })}
-          {this.renderInput({ key: 'email', placeHolder: 'Email' })}
+          {this.renderInput({ key: 'email', placeHolder: 'Email', type: 'email' })}
         </div>
         <div className={'row'}>
-          {this.renderInput({ key: 'phoneNumber', placeHolder: 'Phone Number' })}
+          {this.renderInput({ key: 'phone', placeHolder: 'Phone Number', type: 'tel' })}
           <DatePicker
             customInput={this.renderInput({ key: 'date', placeHolder: 'Date' })}
             onChange={(date) => {
@@ -92,7 +93,7 @@ const mapStateToProps = state => ({
   message: state.user.message,
   name: state.user.name,
   email: state.user.email,
-  phoneNumber: state.user.phoneNumber,
+  phone: state.user.phone,
   date: state.user.date
 });
 
