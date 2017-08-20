@@ -6,6 +6,7 @@ import {
   Route,
 } from 'react-router';
 import firebase from 'firebase';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import App from './App';
 import Home from './containers/home/home';
@@ -13,10 +14,10 @@ import About from './containers/about/about';
 import Events from './containers/events/events';
 import Rooms from './containers/rooms/rooms';
 import RoomDetails from './containers/rooms/roomDetails';
-import Book from './containers/book/book';
 import Contact from './containers/contact/contact';
 import Availability from './containers/availability/availability';
 import Confirmation from './containers/confirmation/confirmation';
+import Notification from '../src/components/Notification';
 
 const config = {
   apiKey: 'AIzaSyATJD-f2-qA-iNRRA9JVRMNRtRXWSg7qYY',
@@ -37,28 +38,33 @@ class Root extends Component {
 
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route
-          path="/"
-          component={App}
-          onEnter={browserHistory.push('home')}
-          onChange={(prevState, nextState) => {
-            if (nextState.location.action !== 'POP') {
-              window.scrollTo(0, 0);
-            }
-          }}
-        >
-          <Route path="home" component={Home} />
-          <Route path="about" component={About} />
-          <Route path="events" component={Events} />
-          <Route path="rooms" component={Rooms} />
-          <Route path="rooms/:roomTitle" component={RoomDetails} />
-          <Route path="book" component={Availability} />
-          <Route path="contact" component={Contact} />
-          <Route path="book/:bookID" component={Availability} />
-          <Route path="confirmation" component={Confirmation} />
-        </Route>
-      </Router>
+      <MuiThemeProvider>
+        <div>
+          <Router history={browserHistory}>
+            <Route
+              path="/"
+              component={App}
+              onEnter={browserHistory.push('home')}
+              onChange={(prevState, nextState) => {
+                if (nextState.location.action !== 'POP') {
+                  window.scrollTo(0, 0);
+                }
+              }}
+            >
+              <Route path="home" component={Home} />
+              <Route path="about" component={About} />
+              <Route path="events" component={Events} />
+              <Route path="rooms" component={Rooms} />
+              <Route path="rooms/:roomTitle" component={RoomDetails} />
+              <Route path="book" component={Availability} />
+              <Route path="contact" component={Contact} />
+              <Route path="book/:bookID" component={Availability} />
+              <Route path="confirmation" component={Confirmation} />
+            </Route>
+          </Router>
+          <Notification />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

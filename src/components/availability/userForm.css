@@ -17,11 +17,8 @@
 }
 
 .userFormButton {
-  height: 3em;
-  font-size: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
-  display: flex;
+  width: 10em;
+  margin-left: 15.5em;
 }
 
 .datePicker: {

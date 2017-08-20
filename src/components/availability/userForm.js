@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import RaisedButton from 'material-ui/RaisedButton';
 
 // Actions
 import { createEmail } from '../../actions/mailChip.actions';
@@ -32,7 +32,7 @@ class UserForm extends Component {
       <div className="inputRow">
         <input
           type={type}
-          value={this.props[key]}
+          value={this.props[key] || ''}
           className={'userInput'}
           placeholder={placeHolder}
           onChange={(event) => {
@@ -74,15 +74,14 @@ class UserForm extends Component {
           />
         </div>
         {this.renderInputMessage()}
-        {/* <Link className="formLink" to="confirmation"> */}
-          <button
-            onClick={() => this.props.sendEmail(this.props)}
-            // disabled={!this.formIsReady()}
-            className="userFormButton"
-          >
-            Submit
-          </button>
-        {/* </Link> */}
+        <RaisedButton
+          disabled={!this.formIsReady()}
+          className="userFormButton"
+          primary
+          label="Submit"
+          buttonStyle={{ backgroundColor: !this.formIsReady() ? '#cccccc' : '#008080' }}
+          onClick={() => this.props.sendEmail(this.props) }
+        />
       </div>
     );
   }
