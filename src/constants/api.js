@@ -1,8 +1,8 @@
 
 const API = {
-  mailChip: 'https://us16.api.mailchimp.com/3.0',
+  base: 'https://t4vi6nkws2.execute-api.us-west-2.amazonaws.com/BarrHouse',
   routes: {
-    campaign: '/campaign/'
+    newReservation: '/newReservation/'
   },
 };
 

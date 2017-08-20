@@ -5,10 +5,13 @@ import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+// Actions
+import { createEmail } from '../../actions/mailChip.actions';
+
+// Styles
 import './userForm.css';
 
 const dateformat = require('dateformat');
-
 
 const requiredFields = [
   'name',
@@ -70,11 +73,15 @@ class UserForm extends Component {
           />
         </div>
         {this.renderInputMessage()}
-        <Link className="formLink" to="confirmation">
-          <button disabled={!this.formIsReady()} className="userFormButton">
+        {/* <Link className="formLink" to="confirmation"> */}
+          <button
+            onClick={() => this.props.sendEmail(this.props)}
+            // disabled={!this.formIsReady()}
+            className="userFormButton"
+          >
             Submit
           </button>
-        </Link>
+        {/* </Link> */}
       </div>
     );
   }
@@ -94,6 +101,7 @@ const mapDispatchToProps = dispatch => ({
     type: 'CHANGE_USER_PROPERTY',
     payload: { property, value }
   }),
+  sendEmail: payload => dispatch(createEmail(payload))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserForm);
