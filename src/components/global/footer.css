@@ -24,13 +24,13 @@
 .footerItem {
   display: inline-block;
   font-size: 1em;
-  color: lightblue;
+  color: #008080;
   text-decoration: none;
 }
 
 .footerItem a {
   display: inline-block;
   font-size: 1em;
-  color: lightblue;
+  color: #008080;
   text-decoration: none;
 }

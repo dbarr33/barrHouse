@@ -8,9 +8,13 @@ import TextField from 'material-ui/TextField';
 
 // Actions
 import { createEmail } from '../../actions/mailChip.actions';
+import { clearUserForm } from '../../actions/userForm.actions';
 
 // Styles
 import './userForm.css';
+
+// Constants
+import Colors from '../../constants/colors';
 
 const dateformat = require('dateformat');
 
@@ -24,6 +28,10 @@ const requiredFields = [
 
 class UserForm extends Component {
 
+  componentWillUnmount() {
+      this.props.clearForm();
+  }
+
   formIsReady() {
     return requiredFields.every(field => this.props[field]);
   }
@@ -33,6 +41,7 @@ class UserForm extends Component {
       <div className="inputRow">
         <TextField
           className={'userInput'}
+          floatingLabelStyle={{ color: Colors.primary }}
           floatingLabelText={placeHolder}
           value={this.props[key] || ''}
           style={{ backgroundColor: 'white', }}
@@ -52,6 +61,7 @@ class UserForm extends Component {
           className={'userInputMessage'}
           multiLine
           rows={4}
+          floatingLabelStyle={{ color: Colors.primary  }}
           floatingLabelText={'Message'}
           value={this.props.message || ''}
           style={{ backgroundColor: 'white', height: 150, width: 525 }}
@@ -108,7 +118,8 @@ const mapDispatchToProps = dispatch => ({
     type: 'CHANGE_USER_PROPERTY',
     payload: { property, value }
   }),
-  sendEmail: payload => dispatch(createEmail(payload))
+  sendEmail: payload => dispatch(createEmail(payload)),
+  clearForm: () => dispatch(clearUserForm())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserForm);
