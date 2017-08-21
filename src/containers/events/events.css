@@ -33,7 +33,7 @@
   width: 70%;
 }
 
-.row {
+.eventRow {
   width: 90%;
   flex-direction: row;
   justify-content: space-between;

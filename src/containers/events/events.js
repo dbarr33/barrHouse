@@ -13,7 +13,7 @@ class Events extends Component {
       <div>
         <HeaderImage image={Event} />
         <SectionHeaders value={'Events'} />
-        <div className={'row'}>
+        <div className={'eventRow'}>
           <div className={'eventSectionContainer'}>
             <div className={'sectionTitle'} >Type of Events</div>
             <ul className={'list'}>
@@ -30,7 +30,7 @@ class Events extends Component {
             alt="page"
           />
         </div>
-        <div className={'row'}>
+        <div className={'eventRow'}>
           <div className={'eventSectionContainer'}>
             <div className={'sectionTitle'} >Food & Drink</div>
             <div className={'sectionHeader'}>Cash Bar</div>
@@ -51,7 +51,7 @@ class Events extends Component {
             alt="page"
           />
         </div>
-        <div className={'row'}>
+        <div className={'eventRow'}>
           <div className={'eventSectionContainer'}>
             <div className={'sectionTitle'} >Rental Fees</div>
             <div className={'explanation'}>
