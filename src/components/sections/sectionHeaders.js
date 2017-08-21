@@ -11,7 +11,7 @@ class Home extends Component {
         <div className="sectionDivider" />
         <text className="sectionText">{this.props.value}</text>
         <div className="sectionDivider" />
-        <text className="sectionDescription">{description}</text>
+        <text className="sectionDescription">{this.props.text || description}</text>
       </div>
     );
   }
