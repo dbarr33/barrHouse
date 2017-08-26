@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 
 import NavigationBar from './components/global/navigationBar';
 import Footer from './components/global/footer';
+import Home from './pages/home/';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
           title="Barr House"
         />
         <NavigationBar />
-        {this.props.children}
+        { this.props.children || <Home /> }
         <Footer />
       </div>
     );

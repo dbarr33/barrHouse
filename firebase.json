@@ -14,12 +14,12 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/build/index.html"
+        "destination": "/index.html"
       },
       {
-    "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
-    "destination": "/build/index.html"
-  }
+        "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
+        "destination": "/index.html"
+      }
     ]
   }
 }

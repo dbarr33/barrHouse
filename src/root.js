@@ -9,14 +9,14 @@ import firebase from 'firebase';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import App from './App';
-import Home from './containers/home/home';
-import About from './containers/about/about';
-import Events from './containers/events/events';
-import Rooms from './containers/rooms/rooms';
-import RoomDetails from './containers/rooms/roomDetails';
-import Contact from './containers/contact/contact';
-import Availability from './containers/availability/availability';
-import Confirmation from './containers/confirmation/confirmation';
+import Home from './pages/home/';
+import About from './pages/about/';
+import Events from './pages/events/';
+import Rooms from './pages/rooms/';
+import RoomDetails from './pages/rooms/';
+import Contact from './pages/contact/';
+import Availability from './pages/availability/';
+import Confirmation from './pages/confirmation/';
 import Notification from '../src/components/Notification';
 
 const config = {
@@ -40,11 +40,11 @@ class Root extends Component {
     return (
       <MuiThemeProvider>
         <div>
-          <Router history={browserHistory}>
+          <Router history={hashHistory}>
             <Route
               path="/"
               component={App}
-              onEnter={browserHistory.push('home')}
+              // onEnter={browserHistory.push('home')}
               onChange={(prevState, nextState) => {
                 if (nextState.location.action !== 'POP') {
                   window.scrollTo(0, 0);
