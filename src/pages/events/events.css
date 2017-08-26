@@ -1,13 +1,15 @@
 
 .sectionTitle {
   font-size: 1.6em;
-  width: 15em;
+  width: 100%;
   border-bottom: #008080 2px solid;
   padding-bottom: 10px;
   margin-bottom: 1em;
 }
 
 .eventSectionContainer {
+  width: 45%;
+  margin-right: 3em;
 }
 
 .sectionHeader {
@@ -34,7 +36,6 @@
 .eventRow {
   width: 90%;
   flex-direction: row;
-  justify-content: space-between;
   display: flex;
   padding-left: 3em;
   margin-bottom: 3em;
@@ -42,7 +43,6 @@
 
 .eventImage {
   margin-top: 3em;
-  margin-right: 8em;
   width: 35em;
   height: 23em;
 }
