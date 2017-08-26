@@ -1,20 +1,18 @@
 
 .sectionTitle {
-  font-size: 1.3em;
-  width: 90%;
+  font-size: 1.6em;
+  width: 15em;
   border-bottom: #008080 2px solid;
-  flex: 1;
   padding-bottom: 10px;
   margin-bottom: 1em;
 }
 
 .eventSectionContainer {
-  flex: 1;
 }
 
 .sectionHeader {
   margin-top: 0.3em;
-  font-size: 1em;
+  font-size: 1.5em;
   margin-top: 1em;
 }
 
@@ -23,7 +21,7 @@
 }
 
 .copy {
-  font-size: 0.9em;
+  font-size: 1.2em;
   margin-left: 1em;
   margin-top: 0.2em;
 }
@@ -43,8 +41,8 @@
 }
 
 .eventImage {
-  max-width: 40%;
-  height: 18em;
-  margin-right: 5em;
-  margin-top: 2.5em;
+  margin-top: 3em;
+  margin-right: 8em;
+  width: 35em;
+  height: 23em;
 }
