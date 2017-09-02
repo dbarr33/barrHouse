@@ -2,11 +2,9 @@ import React, {
   Component,
   PropTypes,
 } from 'react';
+// import { Link } from 'react-router'
 
-import "./bookOption.css";
-import { Link } from 'react-router'
-
-const descriptionFiller ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur quis libero at sagittis. Pellentesque orci nibh, ornare id arcu at, scelerisque rhoncus ligula. Donec posuere mattis leo, non porta erat fermentum at. Duis egestas vulputate sollicitudin. Fusce lacinia tincidunt pu."
+import './bookOption.css';
 
 class BookOption extends Component {
   render() {
@@ -15,20 +13,22 @@ class BookOption extends Component {
       image,
       path,
       title,
-      isAlt,
+      text,
     } = this.props;
     return (
-      <div className={isAlt ? 'bookOptionContainerAlt' : 'bookOptionContainer' }>
+      <div className={'bookOptionContainer'} >
+        <div className="bookOptionImageContainer">
+          <div className="bookOptionTitle">{title}</div>
           <img
             src={image}
             className="bookOptionImage"
             alt="bookingOption"
           />
+        </div>
         <div className="bookOptionDetails">
-          <div className="bookOptionTitle">{title}</div>
           <div className="bookOptionCost">{`$${room.weekCost} - $${room.weekendCost}`}</div>
           <div className="bookOptionDate">{'Sun - Thu - Fri & Sat'}</div>
-          <div className={'bookOptionDescription'}>{descriptionFiller}</div>
+          <div className={'bookOptionDescription'}>{text}</div>
           {/* <Link className="bookOptionLink" to={path}>
             <button className="bookOptionButton">Availability</button>
           </Link> */}
