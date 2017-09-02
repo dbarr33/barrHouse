@@ -26,7 +26,7 @@ class HeaderImage extends Component {
 }
 
 HeaderImage.propTypes = {
-  image: PropTypes.number.isRequired,
+  image: PropTypes.any.isRequired,
   className: PropTypes.string,
 };
 

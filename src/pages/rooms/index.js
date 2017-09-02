@@ -8,9 +8,15 @@ import SectionHeaders from '../../components/sections/sectionHeaders';
 
 // Assets
 import PennRoom from '../../assets/penn_room.png';
+import Penn1 from '../../assets/penn_1.png';
 import TalbotRoom from '../../assets/talbot_room.png';
-import WainWrintRoom from '../../assets/wainwrint_room.png';
+import Talbott1 from '../../assets/talbott_1.png';
 import Den from '../../assets/den.png';
+import WainwrightRoom from '../../assets/wainwright_room.png';
+import Wainwright1 from '../../assets/wainwright_1.png';
+import Wainwright2 from '../../assets/wainwright_2.png';
+import Wainwright3 from '../../assets/wainwright_3.png';
+import Wainwright4 from '../../assets/wainwright_4.png';
 
 // Styles
 import './rooms.css';
@@ -22,28 +28,28 @@ class Rooms extends Component {
         <HeaderImage image={BarrHouse} />
         <SectionHeaders value={'Rooms'} text={headerCopy} />
         <BookOption
-          image={Den}
+          images={[Den, WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4, TalbotRoom, Talbott1, PennRoom, Penn1]}
           room={{ weekCost: 275, weekendCost: 350, cleaningFee: 150, deposit: 150 }}
           path={'/book/singleBed'}
           text={appartment}
           title="House - 3 Bedrooms and 2 Baths"
         />
         <BookOption
-          image={WainWrintRoom}
+          images={[WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4]}
           room={{ weekCost: 175, weekendCost: 175, cleaningFee: 100, deposit: 100 }}
           path={'/book/singleBed'}
           text={appartment}
           title="Wainwright Apartment - Bedroom, Bath, Kitchen, and Den"
         />
         <BookOption
-          image={TalbotRoom}
+          images={[TalbotRoom, Talbott1]}
           room={{ weekCost: 150, weekendCost: 150, cleaningFee: 75, deposit: 75 }}
           path={'/book/singleBed'}
           text={frontRight}
           title="Talbott Room - Bedroom and Bath"
         />
         <BookOption
-          image={PennRoom}
+          images={[PennRoom, Penn1]}
           text={frontLeft}
           room={{ weekCost: 100, weekendCost: 100, cleaningFee: 50, deposit: 50 }}
           path={'/book/singleBed'}

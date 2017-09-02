@@ -3,16 +3,11 @@
   display: flex;
   padding-left: 2%;
   padding-right: 2%;
-  height: 20em;
-  margin-bottom: 7em;
+  padding-bottom: 140px;
 }
 
 .bookOptionDescription {
   font-size: 1em;
-}
-
-.bookOptionImage {
-  width: 70%;
 }
 
 .bookOptionTitle {

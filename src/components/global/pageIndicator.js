@@ -2,7 +2,9 @@ import React, {
   Component,
   PropTypes,
 } from 'react';
-import './pageIndicator.css'
+
+// Styles
+import './pageIndicator.css';
 
 class PageIndicator extends Component {
   render() {
@@ -10,31 +12,29 @@ class PageIndicator extends Component {
       index,
       numberOfPages
     } = this.props;
-    let circles = [];
+    const circles = [];
     for (let i = 0; i < numberOfPages; i++) {
       if (i === index) {
         circles.push(
-          <li key={i} className="activeCircle"/>
-        )
+          <div key={i} className="activeCircle" />
+        );
       } else {
         circles.push(
-          <li key={i} className="circle"/>
-        )
+          <div key={i} className="circle" />
+        );
       }
     }
     return (
-      <div>
-        <div className="pageIndicator">
-          {circles}
-        </div>
+      <div className="pageIndicator">
+        {circles}
       </div>
     );
   }
 }
 
 PageIndicator.propTypes = {
-  index: PropTypes.number,
-  numberOfPages: PropTypes.number
+  index: PropTypes.number.isRequired,
+  numberOfPages: PropTypes.number.isRequired
 };
 
 export default PageIndicator;

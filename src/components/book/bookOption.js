@@ -4,13 +4,17 @@ import React, {
 } from 'react';
 // import { Link } from 'react-router'
 
+// Components
+import ImageViewPager from '../home/imageViewPager';
+
+// Styles
 import './bookOption.css';
 
 class BookOption extends Component {
   render() {
     const {
       room,
-      image,
+      images,
       path,
       title,
       text,
@@ -19,11 +23,7 @@ class BookOption extends Component {
       <div className={'bookOptionContainer'} >
         <div className="bookOptionImageContainer">
           <div className="bookOptionTitle">{title}</div>
-          <img
-            src={image}
-            className="bookOptionImage"
-            alt="bookingOption"
-          />
+          <ImageViewPager images={images} />
         </div>
         <div className="bookOptionDetails">
           <div className="bookOptionCost">{`$${room.weekCost} - $${room.weekendCost}`}</div>
@@ -38,11 +38,11 @@ class BookOption extends Component {
   }
 }
 BookOption.propTypes = {
-  cost: PropTypes.number,
-  image: PropTypes.number,
+  room: PropTypes.object.isRequired,
+  images: PropTypes.array.isRequired,
   path: PropTypes.string,
-  sleeps: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
 };
 
 export default BookOption;
