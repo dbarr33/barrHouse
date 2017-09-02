@@ -3,6 +3,7 @@ import HeaderImage from '../../components/images/headerImage';
 import SectionHeaders from '../../components/sections/sectionHeaders';
 
 import Event from '../../assets/event.jpg';
+import DinningTable from '../../assets/dinning_table.png';
 
 // Styles
 import './events.css';
@@ -11,7 +12,7 @@ class Events extends Component {
   render() {
     return (
       <div>
-        <HeaderImage image={Event} />
+        <HeaderImage image={DinningTable} className={'headerEventImage'} />
         <SectionHeaders value={'Events'} />
         <div className={'eventRow'}>
           <div className={'eventSectionContainer'}>

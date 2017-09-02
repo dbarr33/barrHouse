@@ -1,6 +1,6 @@
 
 .imageContainer {
-  height: 25em;
+  height: 30em;
   display: inline-block;
   position: relative;
   overflow: hidden;
@@ -10,4 +10,10 @@
   width: 100%;
   margin-top: -7em;
   margin-bottom: 7em;
+}
+
+.headerEventImage {
+  width: 100%;
+  margin-top: -18em;
+  margin-bottom: 18em;
 }
