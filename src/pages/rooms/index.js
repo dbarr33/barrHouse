@@ -11,6 +11,7 @@ import PennRoom from '../../assets/penn_room.png';
 import Penn1 from '../../assets/penn_1.png';
 import TalbotRoom from '../../assets/talbot_room.png';
 import Talbott1 from '../../assets/talbott_1.png';
+import Talbott2 from '../../assets/talbott_2.png';
 import Den from '../../assets/den.png';
 import WainwrightRoom from '../../assets/wainwright_room.png';
 import Wainwright1 from '../../assets/wainwright_1.png';
@@ -28,22 +29,22 @@ class Rooms extends Component {
         <HeaderImage image={BarrHouse} />
         <SectionHeaders value={'Rooms'} text={headerCopy} />
         <BookOption
-          images={[Den, WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4, TalbotRoom, Talbott1, PennRoom, Penn1]}
+          images={[Den, WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4, TalbotRoom, Talbott1, Talbott2, PennRoom, Penn1]}
           room={{ weekCost: 275, weekendCost: 350, cleaningFee: 150, deposit: 150 }}
           path={'/book/singleBed'}
-          text={appartment}
+          text={house}
           title="House - 3 Bedrooms and 2 Baths"
         />
         <BookOption
           images={[WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4]}
-          room={{ weekCost: 175, weekendCost: 175, cleaningFee: 100, deposit: 100 }}
+          room={{ weekCost: 145, weekendCost: 145, cleaningFee: 100, deposit: 100 }}
           path={'/book/singleBed'}
           text={appartment}
           title="Wainwright Apartment - Bedroom, Bath, Kitchen, and Den"
         />
         <BookOption
-          images={[TalbotRoom, Talbott1]}
-          room={{ weekCost: 150, weekendCost: 150, cleaningFee: 75, deposit: 75 }}
+          images={[TalbotRoom, Talbott1, Talbott2]}
+          room={{ weekCost: 125, weekendCost: 125, cleaningFee: 75, deposit: 75 }}
           path={'/book/singleBed'}
           text={frontRight}
           title="Talbott Room - Bedroom and Bath"
@@ -51,7 +52,7 @@ class Rooms extends Component {
         <BookOption
           images={[PennRoom, Penn1]}
           text={frontLeft}
-          room={{ weekCost: 100, weekendCost: 100, cleaningFee: 50, deposit: 50 }}
+          room={{ weekCost: 75, weekendCost: 75, cleaningFee: 50, deposit: 50 }}
           path={'/book/singleBed'}
           title="Penn Room - Bedroom"
         />
@@ -98,5 +99,16 @@ additional room needed by a family as it does not contain a bathroom but would
 need to have a shared bathroom. It too sits in the front of the house and across
 from the Talbott Room overlooking the beautiful front grounds of the Barr House
 Inn.`;
+
+const house = `The Barr House Inn can provide all of your families' needs with its three bedrooms
+that can accommodate 6 people very comfortable in its mix of king and queen
+bedrooms with two bathrooms both with walk-in showers, all on the second floor
+of this gracious home. The first floor of the home provides the common areas of
+the house with a gracious entry way, living room, dining room, bar room,
+commercial kitchen and outdoor swimming pool. There is plenty of green space
+to accommodate all of your outdoor needs. Both the upstairs den and the bar
+room have a Smart TV with Wi-Fi access, APPS including NETFLIX and ESPN, and
+also receives 18 local channels. All of the bedrooms are WIFI accessible with
+ceiling fans to provide a cooling breeze.`;
 
 export default Rooms;

@@ -39,4 +39,11 @@ room for kickball, badminton, Bocce, horseshoes, croquet and many more of your
 favorite types of lawn games. So bring them with you and we will provide some
 also.`;
 
+const attractions = `The house is located near downtown which is in easy walking distance of
+exploring this quaint little town that boasts a downtown Antiques district and has
+both a Craft Beer establishment and a Bourbon distillery. There is a darling boot
+store and wonderful gift shops. There are many world renowned Thoroughbred
+horse farms within easy driving distance to visit also. More information can be
+found on our website under the “Things To Do” page.`;
+
 export default Home;
