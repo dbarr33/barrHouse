@@ -5,6 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
 import TextField from 'material-ui/TextField';
+import CircularProgress from 'material-ui/CircularProgress';
 
 // Actions
 import { createEmail } from '../../actions/mailChip.actions';
@@ -36,7 +37,7 @@ class UserForm extends Component {
     return requiredFields.every(field => this.props[field]);
   }
 
-  renderInput({ key, placeHolder, type }) {
+  renderInput({ key, placeHolder }) {
     return (
       <div className="inputRow">
         <TextField
@@ -75,6 +76,7 @@ class UserForm extends Component {
   }
 
   render() {
+    const { isActive } = this.props;
     return (
       <div className="userForm">
         <div className={'formCopy'}>
@@ -101,13 +103,14 @@ class UserForm extends Component {
         </div>
         {this.renderInputMessage()}
         <RaisedButton
-          disabled={!this.formIsReady()}
+          disabled={!this.formIsReady() || isActive}
           className="userFormButton"
           primary
           label="Submit"
-          buttonStyle={{ backgroundColor: !this.formIsReady() ? '#cccccc' : '#008080' }}
+          buttonStyle={{ backgroundColor: isActive || !this.formIsReady() ? '#cccccc' : '#008080' }}
           onClick={() => this.props.sendEmail(this.props) }
         />
+        {isActive && <CircularProgress size={'20'} style={{ marginLeft: -90, zIndex: 1 }} color={'#008080'} /> }
       </div>
     );
   }
@@ -119,7 +122,8 @@ const mapStateToProps = state => ({
   name: state.user.name,
   email: state.user.email,
   phone: state.user.phone,
-  date: state.user.date
+  date: state.user.date,
+  isActive: state.user.isActive
 });
 
 const mapDispatchToProps = dispatch => ({

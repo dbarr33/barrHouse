@@ -29,14 +29,14 @@ class Rooms extends Component {
         <HeaderImage image={BarrHouse} />
         <SectionHeaders value={'Rooms'} text={headerCopy} />
         <BookOption
-          images={[Den, WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4, TalbotRoom, Talbott1, Talbott2, PennRoom, Penn1]}
+          images={[Den, WainwrightRoom, Wainwright3, Wainwright1, Wainwright2, Wainwright4, TalbotRoom, Talbott1, Talbott2, PennRoom, Penn1]}
           room={{ weekCost: 275, weekendCost: 350, cleaningFee: 150, deposit: 150 }}
           path={'/book/singleBed'}
           text={house}
           title="House - 3 Bedrooms and 2 Baths"
         />
         <BookOption
-          images={[WainwrightRoom, Wainwright1, Wainwright2, Wainwright3, Wainwright4]}
+          images={[WainwrightRoom, Wainwright3, Wainwright1, Wainwright2, Wainwright3, Wainwright4]}
           room={{ weekCost: 145, weekendCost: 145, cleaningFee: 100, deposit: 100 }}
           path={'/book/singleBed'}
           text={appartment}
