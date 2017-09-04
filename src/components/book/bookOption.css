@@ -7,42 +7,29 @@
 }
 
 .bookOptionDescription {
-  font-size: 1em;
+  font-size: 18px;
 }
 
 .bookOptionTitle {
   margin-bottom: 0.5em;
-  font-size: 1.5em;
+  font-size: 24px;
   border-bottom: #008080 2px solid;
   width: 100%;
 }
 
 .bookOptionCost {
-  font-size: 1.5em;
+  font-size: 22px;
   margin-bottom: 0.25em;
   text-align: center;
 }
 
 .bookOptionDate {
-  font-size: 1em;
+  font-size: 18px;
   margin-left: -0.50em;
   text-align: center;
   margin-bottom: 1em;
 }
 
-.bookOptionButton {
-  height: 3em;
-  font-size: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
-  display: flex;
-  margin: auto;
-  margin-top: 2em;
-}
-
-.bookOptionLink {
-  text-decoration: none;
-}
 
 .bookOptionImageContainer {
   flex: 1;
