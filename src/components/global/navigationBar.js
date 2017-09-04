@@ -19,9 +19,9 @@ class NavigationBar extends Component {
             <div className="navItem">
               <Link to="/events">Events</Link>
             </div>
-            <div className="navItem">
+            {/* <div className="navItem">
               <Link to="/about">About</Link>
-            </div>
+            </div> */}
             <div className="navItem">
               <Link to="/rooms">Rooms</Link>
             </div>

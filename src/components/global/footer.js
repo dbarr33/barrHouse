@@ -22,9 +22,9 @@ class Footer extends Component {
             <Link to="/events">Events</Link>
           </div>
           <div className="divider" />
-          <div className="footerItem">
+          {/* <div className="footerItem">
             <Link to="/about">About</Link>
-          </div>
+          </div> */}
           <div className="divider" />
           <div className="footerItem">
             <Link to="/rooms">Rooms</Link>
