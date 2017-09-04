@@ -2,7 +2,6 @@ import React, {
   Component,
   PropTypes,
 } from 'react';
-// import { Link } from 'react-router'
 
 // Components
 import ImageViewPager from '../home/imageViewPager';
@@ -15,7 +14,6 @@ class BookOption extends Component {
     const {
       room,
       images,
-      path,
       title,
       text,
     } = this.props;
@@ -29,9 +27,6 @@ class BookOption extends Component {
           <div className="bookOptionCost">{room.weekCost === room.weekendCost ? `$${room.weekCost}` : `$${room.weekCost} - $${room.weekendCost}`}</div>
           <div className="bookOptionDate">{room.weekCost === room.weekendCost ? 'Sun - Sat' : 'Sun - Thu - Fri & Sat'}</div>
           <div className={'bookOptionDescription'}>{text}</div>
-          {/* <Link className="bookOptionLink" to={path}>
-            <button className="bookOptionButton">Availability</button>
-          </Link> */}
         </div>
       </div>
     );

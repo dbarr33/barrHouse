@@ -4,7 +4,6 @@
 }
 
 .page {
-  white-space: nowrap;
+  width: 100%;
   position: relative;
-  height: 42em;
 }

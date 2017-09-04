@@ -1,13 +1,13 @@
-import React, {
-  Component,
-} from 'react';
-import house from '../../assets/barr-house.jpg';
-import backHouse from '../../assets/back-house.jpg';
-import patio from '../../assets/patio.jpg';
+import React, { Component, } from 'react';
+
+// Assets
 import rightArrow from '../../assets/arrow_right.svg';
 import leftArrow from '../../assets/arrow_left.svg';
 
+// Styles
 import './ImageViewPager.css';
+
+// Components
 import PageIndicator from '../global/pageIndicator';
 import ImagePage from './imagePage';
 
@@ -37,22 +37,24 @@ class ImageViewPager extends Component {
   }
 
   moveUp() {
-    this.refs.image.refs.page.classList.add('rightToLeftTranslate');
-    this.refs.backImage.refs.page.classList.add('rightToLeftTranslate');
-    this.refs.image.refs.page.addEventListener('webkitAnimationEnd', this.advanceImage, false);
+    const { images } = this.props;
+
+    // this.refs.image.refs.page.classList.add('rightToLeftTranslate');
+    // this.refs.backImage.refs.page.classList.add('rightToLeftTranslate');
+    // this.refs.image.refs.page.addEventListener('webkitAnimationEnd', this.advanceImage, false);
+    this.setState({ activeImage: (this.state.activeImage + 1) % images.length });
   }
 
   moveDown() {
     const { images } = this.props;
-
-    this.refs.image.refs.page.classList.add('leftToRightTranslate');
-    this.refs.backImage.refs.page.classList.add('leftToRightTranslate');
+    // this.refs.image.refs.page.classList.add('leftToRightTranslate');
+    // this.refs.backImage.refs.page.classList.add('leftToRightTranslate');
     if (this.state.activeImage === 0) {
-      this.setState({ activeImage: 2 });
+      this.setState({ activeImage: images.length });
     } else {
       this.setState({ activeImage: (this.state.activeImage - 1) % images.length });
     }
-    this.refs.image.refs.page.addEventListener('webkitAnimationEnd', this.backImage, false);
+    // this.refs.image.refs.page.addEventListener('webkitAnimationEnd', this.backImage, false);
   }
 
   renderImagePage({ index, ref }) {
@@ -75,11 +77,11 @@ class ImageViewPager extends Component {
             ref: 'image'
           })
           }
-          {this.renderImagePage({
+          {/* {this.renderImagePage({
             index: this.state.activeImage + 1,
             ref: 'backImage'
           })
-          }
+          } */}
         </div>
         <div className="leftButton" >
           <img
