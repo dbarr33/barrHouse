@@ -2,25 +2,21 @@
 .leftButton {
   position: relative;
   height: 50px;
+  top: -10em;
   width: 50px;
-  margin-top: -20%;
   z-index: 1;
 }
 
 .rightButton {
   position: relative;
-  left: 90%;
   height: 50px;
-  z-index: 1;
-  margin-top: -8%;
+  left: 90%;
+  top: -12.5em;
   width: 50px;
 }
 
 .imageList {
-  overflow: hidden;
-  display: flex;
   align-items: row;
-  white-space: nowrap;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -28,11 +24,13 @@
 
 .viewPager {
   width: 90%;
+  position: relative;
 }
 
 .pageIndicatorContainer {
   position: relative;
   display: flex;
+  top: -10em;
   align-self: center;
   z-index: 1;
 }
