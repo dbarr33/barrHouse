@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 // Components
 import BookOption from '../../components/book/bookOption';
-import BarrHouse from '../../assets/barr-house.jpg';
 import HeaderImage from '../../components/images/headerImage';
 import SectionHeaders from '../../components/sections/sectionHeaders';
 
 // Assets
+import BarrHouse from '../../assets/back-house.jpg';
 import PennRoom from '../../assets/penn_room.png';
 import Penn1 from '../../assets/penn_1.png';
 import TalbotRoom from '../../assets/talbot_room.png';

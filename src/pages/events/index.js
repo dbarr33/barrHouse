@@ -3,7 +3,7 @@ import HeaderImage from '../../components/images/headerImage';
 import SectionHeaders from '../../components/sections/sectionHeaders';
 
 import Event from '../../assets/event.jpg';
-import DinningTable from '../../assets/dinning_table.png';
+import Patio from '../../assets/patio.jpg';
 
 // Styles
 import './events.css';
@@ -12,7 +12,7 @@ class Events extends Component {
   render() {
     return (
       <div>
-        <HeaderImage image={DinningTable} className={'headerEventImage'} />
+        <HeaderImage image={Patio} className={'headerEventImage'} />
         <SectionHeaders text={eventCopy} value={'Events'} />
         <div className={'eventRow'}>
           <div className={'eventSectionContainer'}>
@@ -81,7 +81,7 @@ Hilton Head Island. Their experience in the food and restaurant business is
 valuable in serving people desiring to host any event at the Barr House Inn.`;
 
 const foodCopy = `The Barr House Inn creates a southern style venue that is appealing to any event
-that you may choose to host. The Barr House Inn has very flexible food policy. We can suggest a number of caterers based on your requirements, you can provide 
+that you may choose to host. The Barr House Inn has very flexible food policy. We can suggest a number of caterers based on your requirements, you can provide
 your own caterer, or bring your own food. The house has a commercial kitchen which will accommodate
 all of the needs of your caterer. The Barr House Inn is licensed and can provide alcoholic beverages that are priced
 based on your desired price point.`;
