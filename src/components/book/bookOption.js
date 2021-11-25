@@ -24,8 +24,8 @@ class BookOption extends Component {
           <ImageViewPager images={images} />
         </div>
         <div className="bookOptionDetails">
-          <div className="bookOptionCost">{room.weekCost === room.weekendCost ? `$${room.weekCost}` : `$${room.weekCost} - $${room.weekendCost}`}</div>
-          <div className="bookOptionDate">{room.weekCost === room.weekendCost ? 'Sun - Sat' : 'Sun - Thu - Fri & Sat'}</div>
+          {/* <div className="bookOptionCost">{room.weekCost === room.weekendCost ? `$${room.weekCost}` : `$${room.weekCost} - $${room.weekendCost}`}</div> */}
+          {/* <div className="bookOptionDate">{room.weekCost === room.weekendCost ? 'Sun - Sat' : 'Sun - Thu - Fri & Sat'}</div> */}
           <div className={'bookOptionDescription'}>{text}</div>
         </div>
       </div>
